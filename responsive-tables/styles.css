@@ -169,7 +169,6 @@ table.basic thead {
 .firstColumn {
     display: grid;
     grid-template-columns: 1fr;
-    font-size: .9rem;
     width: 20%;
     position: relative;
     float:left;
@@ -231,14 +230,20 @@ table.basic thead {
     grid-column: span 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    position: sticky;
     top: 0;
 }
 
-.fixed-header.first-col {
-    position: sticky;
-}
 
+.tables-header-wrapper.fixed {
+    position: sticky;
+    z-index: 999;
+    opacity: 1;
+    top: 0;
+
+}
+.tables-header-wrapper.fixed > div{
+    position: relative;
+}
 
 
 /* Common styles */
