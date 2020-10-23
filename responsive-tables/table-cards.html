@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <div id="vue-app">
+
+
+        <template v-for="fruit in fruits">
+            <div class="card-wrapper">
+                <div class="header">
+                    <div class="basics">
+                        {{fruit.name}}</div>
+                </div>
+                <div class="img">
+                    <img :src="'img/fruits/' + fruit.image + '.svg'">
+                </div>
+                <div class="contents">
+                    <div class="basics">
+                        <div class="">
+                            <span class="title">Protein: </span>
+                            <span>{{fruit.protein}}</span>
+                        </div>
+                        <div class="">
+                            <span class="title">Calories: </span>
+                            <span>{{fruit.calories}}</span>
+                        </div>
+                        <div class="">
+                            <span class="title">Fiber: </span>
+                            <span>{{fruit.fiber}}</span>
+                        </div>
+
+                    </div>
+                    <div class="minerals">
+                        <div class="btn border-bottom" id="btn-minerals" @click="toggleVisibility()">
+                            <span>></span>
+                            Minerals
+                        </div>
+                        <template v-for="(val, key, index) in fruit.minerals">
+                            <div v-show="!visible" class="cell" v-if="val != ''">
+                                <span>{{ capitalizeFirstLetter(key) }}: </span>
+                                <span>{{val ? val : 'too little'}}</span>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="vitamins">
+                        <div class="btn" id="btn-vitamins" @click="toggleVisibility()">
+                            <span>></span>
+                            Vitamins
+                        </div>
+                        <template v-for="(val, key, index) in fruit.vitamins">
+                            <div v-show="!visible" class="cell">
+                                <span>{{ unCamelCase(key) }}: </span>
+                                <span>{{val}}</span>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+
+
+
+        <div class="">
+
+
+            <div class="table-grid simplified4 text-center">
+
+                <div class="title cell basics first-col">Name</div>
+                <div class="title cell basics">Protein</div>
+                <div class="title cell basics">Calories</div>
+                <div class="title cell basics">Fiber</div>
+
+
+
+                <template v-for="fruit in fruits">
+
+                    <!-- <div class="cell basics image"><img :src="'img/fruits/' + fruit.image + '.svg'"></div> -->
+                    <div class="cell basics first-col img"><img :src="'img/fruits/' + fruit.image + '.svg'">
+                        <span>{{fruit.name}}</span></div>
+                    <div class="cell basics">{{fruit.protein}}</div>
+                    <div class="cell basics">{{fruit.calories}}</div>
+                    <div class="cell basics">{{fruit.fiber}}</div>
+
+                </template>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script src="vue-app.js" async defer type="module"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+</body>
+
+</html>

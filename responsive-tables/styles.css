@@ -246,6 +246,84 @@ table.basic thead {
 }
 
 
+/* Card version */
+
+.card-wrapper {
+    width: 99%;
+    margin: 1em auto;
+    border: 1px solid #bbec6c;
+    box-sizing: border-box;
+    border-radius: .5rem;
+    line-height: 1.25;
+}
+
+.card-wrapper .header {
+    padding: .75rem 1rem .5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background: #bbec6c;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.card-wrapper .img img {
+    max-width: 50px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.card-wrapper .contents .basics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.card-wrapper .img,
+.card-wrapper .contents .basics {
+    padding: .75rem 1rem;
+}
+
+.card-wrapper .contents .basics span {
+    display: block;
+
+}
+
+.card-wrapper .contents .title {
+    font-weight: 700;
+}
+
+.card-wrapper .contents .cell {
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #bbec6c;
+}
+
+.card-wrapper .contents .vitamins .cell:last-child {
+    border-radius: 0 0 .5rem .5rem;
+}
+
+.card-wrapper .btn {
+    font-weight: 600;
+    font-size: .95rem;
+    background-color: #e6ffbe;
+    padding: .5rem;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #bbec6c;
+}
+
+
+.hidden {
+
+}
+
+
+
 /* Common styles */
 
 .cell.title {

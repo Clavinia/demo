@@ -3,7 +3,8 @@ import fruits from "./data/fruits.js";
 var vm = new Vue({
     el: '#vue-app',
     data: {
-        fruits: fruits
+        fruits: fruits,
+        visible: true
     },
     methods: {
         capitalizeFirstLetter: function (string) {
@@ -19,7 +20,12 @@ var vm = new Vue({
                 .replace(/^./, function (string) {
                     return string.toUpperCase();
                 })
+        },
+        toggleVisibility: function() {
+            console.log('algún día seré');
         }
     },
-    computed: { }
+    computed: { 
+ 
+    }
     });
