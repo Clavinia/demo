@@ -212,6 +212,20 @@ table.basic thead {
     color: #f74948;
 }
 
+.slick-dots {
+    position: fixed;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 4px 0 6px 0;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+    background-color: #fff;
+    z-index: 9999;
+    text-align: center;
+}
+
 
 .fixed-header .table-header:not(.first-col) {
     grid-column: span 3;
@@ -257,19 +271,6 @@ table.basic thead {
 /* Small devices (landscape phones, 576px and up) */
 
 @media screen and (max-width: 576px) { 
-    .slick-dots {
-        position: fixed;
-        bottom: 0;
-        display: block;
-        width: 100%;
-        padding: 4px 0 6px 0;
-        margin: 0 auto;
-        list-style: none;
-        text-align: center;
-        background-color: #fff;
-        z-index: 9999;
-        text-align: center;
-    }
 
     .nav-margin .slick-dots {
         margin-left: -20%;
