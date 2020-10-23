@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <div id="vue-app">
+        <h2 class="h-title">HTML table</h2>
+
+            <div class="canvas">
+                <table class="basic">
+                    <thead>
+                        <tr>
+                            <td colspan="4">Fruit basics</td>
+                            <td colspan="10">Minerals</td>
+                            <td colspan="10">Vitamins</td>
+                        </tr>
+                        <tr>
+                            
+                            <td>Name</td>
+                            <td>Protein</td>
+                            <td>Calories</td>
+                            <td>Fiber</td>
+                            <td>Potassium</td>
+                            <td>Calcium</td>
+                            <td>Phosphorous</td>
+                            <td>Magnesium</td>
+                            <td>Manganese</td>
+                            <td>Iron</td>
+                            <td>Sodium</td>
+                            <td>Copper</td>
+                            <td>Zinc</td>
+                            <td>Selenium</td>
+                            <td>Vitamin A</td>
+                            <td>Vitamin B1</td>
+                            <td>Vitamin B2</td>
+                            <td>Vitamin B6</td>
+                            <td>Vitamin C</td>
+                            <td>Vitamin E</td>
+                            <td>Vitamin K</td>
+                            <td>Niacin</td>
+                            <td>Folate</td>
+                            <td>Pantothenic Acid</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="fruit in fruits">
+                            <!-- <td><img :src="'img/fruits/' + fruit.image + '.svg'"></td> -->
+                            <td>{{fruit.name}}</td>
+                            <td>{{fruit.protein}}</td>
+                            <td>{{fruit.calories}}</td>
+                            <td>{{fruit.fiber}}</td>
+                            <td>{{fruit.minerals.potassium}}</td>
+                            <td>{{fruit.minerals.calcium}}</td>
+                            <td>{{fruit.minerals.phosphorous}}</td>
+                            <td>{{fruit.minerals.magnesium}}</td>
+                            <td>{{fruit.minerals.manganese}}</td>
+                            <td>{{fruit.minerals.iron}}</td>
+                            <td>{{fruit.minerals.sodium}}</td>
+                            <td>{{fruit.minerals.copper}}</td>
+                            <td>{{fruit.minerals.zinc}}</td>
+                            <td>{{fruit.minerals.selenium}}</td>
+                            <td>{{fruit.vitamins.vitaminA}}</td>
+                            <td>{{fruit.vitamins.vitaminB1}}</td>
+                            <td>{{fruit.vitamins.vitaminB2}}</td>
+                            <td>{{fruit.vitamins.vitaminB6}}</td>
+                            <td>{{fruit.vitamins.vitaminC}}</td>
+                            <td>{{fruit.vitamins.vitaminE}}</td>
+                            <td>{{fruit.vitamins.vitaminK}}</td>
+                            <td>{{fruit.vitamins.niacin}}</td>
+                            <td>{{fruit.vitamins.folate}}</td>
+                            <td>{{fruit.vitamins.pantothenicAcid}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+
+    </div>
+    
+    <script src="vue-app.js" async defer type="module"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+</body>
+
+</html>

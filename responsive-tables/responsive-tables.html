@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+
+        <div class="container p-5">
+            <h1 class="text-center">Responsive table solutions</h1>
+        </div>
+
+        <div class="container p-2">
+            <h2 class="text-center mb-4">HTML table</h2>
+
+            <div class="canvas">
+                <table class="basic text-center">
+                    <thead>
+                        <tr>
+                            <td colspan="4">Fruit basics</td>
+                            <td colspan="10">Minerals</td>
+                            <td colspan="10">Vitamins</td>
+                        </tr>
+                        <tr>
+                            <!-- <td>Image</td> -->
+                            <td>Name</td>
+                            <td>Protein</td>
+                            <td>Calories</td>
+                            <td>Fiber</td>
+                            <td>Potassium</td>
+                            <td>Calcium</td>
+                            <td>Phosphorous</td>
+                            <td>Magnesium</td>
+                            <td>Manganese</td>
+                            <td>Iron</td>
+                            <td>Sodium</td>
+                            <td>Copper</td>
+                            <td>Zinc</td>
+                            <td>Selenium</td>
+                            <td>Vitamin A</td>
+                            <td>Vitamin B1</td>
+                            <td>Vitamin B2</td>
+                            <td>Niacin</td>
+                            <td>Folate</td>
+                            <td>Pantothenic Acid</td>
+                            <td>Vitamin B6</td>
+                            <td>Vitamin C</td>
+                            <td>Vitamin E</td>
+                            <td>Vitamin K</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="fruit in fruits">
+                            <!-- <td><img :src="'img/fruits/' + fruit.image + '.svg'"></td> -->
+                            <td>{{fruit.name}}</td>
+                            <td>{{fruit.protein}}</td>
+                            <td>{{fruit.calories}}</td>
+                            <td>{{fruit.fiber}}</td>
+                            <td>{{fruit.minerals.potassium}}</td>
+                            <td>{{fruit.minerals.calcium}}</td>
+                            <td>{{fruit.minerals.phosphorous}}</td>
+                            <td>{{fruit.minerals.magnesium}}</td>
+                            <td>{{fruit.minerals.manganese}}</td>
+                            <td>{{fruit.minerals.iron}}</td>
+                            <td>{{fruit.minerals.sodium}}</td>
+                            <td>{{fruit.minerals.copper}}</td>
+                            <td>{{fruit.minerals.zinc}}</td>
+                            <td>{{fruit.minerals.selenium}}</td>
+                            <td>{{fruit.vitamins.vitaminA}}</td>
+                            <td>{{fruit.vitamins.vitaminB1}}</td>
+                            <td>{{fruit.vitamins.vitaminB2}}</td>
+                            <td>{{fruit.vitamins.vitaminB6}}</td>
+                            <td>{{fruit.vitamins.vitaminC}}</td>
+                            <td>{{fruit.vitamins.vitaminC}}</td>
+                            <td>{{fruit.vitamins.vitaminK}}</td>
+                            <td>{{fruit.vitamins.niacin}}</td>
+                            <td>{{fruit.vitamins.fotale}}</td>
+                            <td>{{fruit.vitamins.pantothenicAcid}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="container p-2">
+            <h2 class="text-center mb-4 mt-4">CSS grid table</h2>
+
+            <div class="canvas">
+
+                <div class="table-grid text-center">
+
+
+                    <div class="header-filter fr-1 cell">Basics</div>
+                    <div class="header-filter fr-2 cell">Minerals</div>
+                    <div class="header-filter fr-2 cell">Vitamins</div>
+
+
+                    <!-- <div class="title cell basics image">Image</div> -->
+                    <div class="title cell basics first-col">Name</div>
+                    <div class="title cell basics">Protein</div>
+                    <div class="title cell basics">Calories</div>
+                    <div class="title cell basics">Fiber</div>
+
+                    <div class="title cell minerals">Potassium</div>
+                    <div class="title cell minerals">Calcium</div>
+                    <div class="title cell minerals">Phosphorous</div>
+                    <div class="title cell minerals">Magnesium</div>
+                    <div class="title cell minerals">Manganese</div>
+                    <div class="title cell minerals">Iron</div>
+                    <div class="title cell minerals">Sodium</div>
+                    <div class="title cell minerals">Copper</div>
+                    <div class="title cell minerals">Zinc</div>
+                    <div class="title cell minerals">Selenium</div>
+
+                    <div class="title cell vitamins">Vitamin A</div>
+                    <div class="title cell vitamins">Vitamin B1</div>
+                    <div class="title cell vitamins">Vitamin B2</div>
+                    <div class="title cell vitamins">Vitamin B6</div>
+                    <div class="title cell vitamins">Vitamin C</div>
+                    <div class="title cell vitamins">Vitamin E</div>
+                    <div class="title cell vitamins">Vitamin K</div>
+                    <div class="title cell vitamins">Niacin</div>
+                    <div class="title cell vitamins">Folate</div>
+                    <div class="title cell vitamins">Pantothenic Acid</div>
+
+
+                    <template v-for="fruit in fruits">
+
+                        <!-- <div class="cell basics image"><img :src="'img/fruits/' + fruit.image + '.svg'"></div> -->
+                        <div class="cell basics first-col">{{fruit.name}}</div>
+                        <div class="cell basics">{{fruit.protein}}</div>
+                        <div class="cell basics">{{fruit.calories}}</div>
+                        <div class="cell basics">{{fruit.fiber}}</div>
+
+                        <div class="cell minerals">{{fruit.minerals.potassium}}</div>
+                        <div class="cell minerals">{{fruit.minerals.calcium}}</div>
+                        <div class="cell minerals">{{fruit.minerals.phosphorous}}</div>
+                        <div class="cell minerals">{{fruit.minerals.magnesium}}</div>
+                        <div class="cell minerals">{{fruit.minerals.manganese}}</div>
+                        <div class="cell minerals">{{fruit.minerals.iron}}</div>
+                        <div class="cell minerals">{{fruit.minerals.sodium}}</div>
+                        <div class="cell minerals">{{fruit.minerals.copper}}</div>
+                        <div class="cell minerals">{{fruit.minerals.zinc}}</div>
+                        <div class="cell minerals">{{fruit.minerals.selenium}}</div>
+
+                        <div class="cell vitamins">{{fruit.vitamins.vitaminA}}</div>
+                        <div class="cell vitamins">{{fruit.vitamins.vitaminB1}}</div>
+                        <div class="cell vitamins">{{fruit.vitamins.vitaminB2}}</div>
+                        <div class="cell vitamins">{{fruit.vitamins.vitaminB6}}</div>
+                        <div class="cell vitamins">{{fruit.vitamins.vitaminC}}</div>
+                        <div class="cell vitamins">{{fruit.vitamins.vitaminE}}</div>
+                        <div class="cell vitamins">{{fruit.vitamins.vitaminK}}</div>
+                        <div class="cell vitamins">{{fruit.vitamins.niacin}}</div>
+                        <div class="cell vitamins">{{fruit.vitamins.folate}}</div>
+                        <div class="cell vitamins">{{fruit.vitamins.pantothenicAcid}}</div>
+
+                    </template>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="container p-2 pt-5">
+            <h2 class="text-center mb-4">Mobile container</h2>
+
+            <div class="canvas-mobile">
+
+                <div class="table-grid simplified text-center">
+
+
+                    <div class="header-filter fr-1 cell">Basics</div>
+                    <div class="header-filter fr-2 cell">Top 3 Minerals</div>
+                    <div class="header-filter fr-2 cell">Top 3 Minerals</div>
+
+
+                    <!-- <div class="title cell basics image">Image</div> -->
+                    <div class="title cell basics first-col">Name</div>
+                    <div class="title cell basics">Protein</div>
+                    <div class="title cell basics">Calories</div>
+                    <div class="title cell basics">Fiber</div>
+
+                    <div class="title cell minerals">#1</div>
+                    <div class="title cell minerals">#2</div>
+                    <div class="title cell minerals">#3</div>
+
+                    <div class="title cell vitamins">#1</div>
+                    <div class="title cell vitamins">#2</div>
+                    <div class="title cell vitamins">#3</div>
+
+
+                    <template v-for="fruit in fruits">
+
+                        <!-- <div class="cell basics image"><img :src="'img/fruits/' + fruit.image + '.svg'"></div> -->
+                        <div class="cell basics first-col img"><img :src="'img/fruits/' + fruit.image + '.svg'">
+                            <span>{{fruit.name}}</span></div>
+                        <div class="cell basics">{{fruit.protein}}</div>
+                        <div class="cell basics">{{fruit.calories}}</div>
+                        <div class="cell basics">{{fruit.fiber}}</div>
+
+                        <template v-for="(val, key, index) in fruit.minerals" v-if="index < 3">
+                            <div class="cell minerals">
+                                <span>{{ capitalizeFirstLetter(key) }}</span>
+                                <span>{{val}}</span>
+                            </div>
+                        </template>
+
+                        <template v-for="(val, key, index) in fruit.vitamins" v-if="index < 3">
+                            <div class="cell vitamins">
+                                <span>{{ unCamelCase(key) }}</span>
+                                <span>{{val}}</span>
+                            </div>
+                        </template>
+
+                    </template>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container p-2 pt-5">
+            <h2 class="text-center mb-4">Slides solution</h2>
+
+            <div class="canvas-mobile">
+
+                <div class="table-slides simplified text-center ">
+
+
+                    <!-- <div class="header-filter fr-1 cell">Basics</div>
+                    <div class="header-filter fr-2 cell">Top 3 Minerals</div>
+                    <div class="header-filter fr-2 cell">Top 3 Minerals</div> -->
+
+                    <div class="firstColumn">
+                        <div class="title cell basics first-col">Name</div>
+                        <template template v-for="fruit in fruits">
+                            <div>
+                                <div class="cell basics first-col img"><img :src="'img/fruits/' + fruit.image + '.svg'">
+                                    <span>{{fruit.name}}</span></div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="slick-carousel">
+                            <div>
+                                <div class="slide-element">
+                                    <div class="title cell basics">Protein</div>
+                                    <div class="title cell basics">Calories</div>
+                                    <div class="title cell basics">Fiber</div>
+                                    <template template v-for="fruit in fruits">
+                                        <div class="cell basics">{{fruit.protein}}</div>
+                                        <div class="cell basics">{{fruit.calories}}</div>
+                                        <div class="cell basics">{{fruit.fiber}}</div>
+                                    </template>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="slide-element">
+                                    <div class="title cell minerals">Mineral #1</div>
+                                    <div class="title cell minerals">Mineral #2</div>
+                                    <div class="title cell minerals">Mineral #3</div>
+                                    <template template v-for="fruit in fruits">
+                                    <template v-for="(val, key, index) in fruit.minerals" v-if="index < 3">
+                                        <div class="cell minerals">
+                                            <span>{{ capitalizeFirstLetter(key) }}</span>
+                                            <span>{{val}}</span>
+                                        </div>
+                                    </template>
+                                    </template>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="slide-element">
+                                    <div class="title cell vitamins">Vitamin #1</div>
+                                    <div class="title cell vitamins">Vitamin #2</div>
+                                    <div class="title cell vitamins">Vitamin #3</div>
+                                    <template template v-for="fruit in fruits">
+                                    <template v-for="(val, key, index) in fruit.vitamins" v-if="index < 3">
+                                        <div class="cell vitamins">
+                                            <span>{{ unCamelCase(key) }}</span>
+                                            <span>{{val}}</span>
+                                        </div>
+                                    </template>
+                                    </template>
+
+                                </div>
+                            </div>
+    
+    
+                        </div>
+                    </div>
+                    
+
+
+
+                    
+                    </div>
+        
+
+
+
+                    <!-- <div class="title cell basics first-col">Name</div>
+                    <div class="title cell basics">Protein</div>
+                    <div class="title cell basics">Calories</div>
+                    <div class="title cell basics">Fiber</div>
+
+                    <div class="title cell minerals">#1</div>
+                    <div class="title cell minerals">#2</div>
+                    <div class="title cell minerals">#3</div>
+
+                    <div class="title cell vitamins">#1</div>
+                    <div class="title cell vitamins">#2</div>
+                    <div class="title cell vitamins">#3</div>
+
+
+                    <template v-for="fruit in fruits">
+
+                        <div class="cell basics first-col img"><img :src="'img/fruits/' + fruit.image + '.svg'"> <span>{{fruit.name}}</span></div>
+                        <div class="cell basics">{{fruit.protein}}</div>
+                        <div class="cell basics">{{fruit.calories}}</div>
+                        <div class="cell basics">{{fruit.fiber}}</div>
+
+                        <template v-for="(val, key, index) in fruit.minerals" v-if="index < 3">
+                            <div class="cell minerals">
+                                <span>{{ capitalizeFirstLetter(key) }}</span> 
+                                <span>{{val}}</span>
+                            </div>
+                        </template>
+
+                        <template v-for="(val, key, index) in fruit.vitamins" v-if="index < 3">
+                            <div class="cell vitamins">
+                                <span>{{ unCamelCase(key) }}</span> 
+                                <span>{{val}}</span>
+                            </div>
+                        </template>
+
+                    </template> -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script src="vue-app.js" async defer type="module"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+        integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous">
+    </script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <!-- Slick script -->
+    <script src="slick-call.js" async defer type="module"></script>
+</body>
+
+</html>
