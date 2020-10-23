@@ -29,7 +29,7 @@
     
                     </div>
     
-                    <div class="slick-carousel-header">
+                    <div class="slick-carousel-fixed-header">
                         <div>
                             <div class="slide-element">
     
@@ -79,7 +79,7 @@
                     </template>
                 </div>
                 <div class="carousel-container nav-margin">
-                    <div class="slick-carousel">
+                    <div class="slick-carousel slick-carousel-fixed">
                         <div>
                             <div class="slide-element">
 
@@ -148,17 +148,17 @@
     <!-- Slick script -->
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.slick-carousel').slick({
+            $('.slick-carousel-fixed').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: false,
                 arrows: false,
                 dots: true,
-                asNavFor: '.slick-carousel-header'
+                asNavFor: '.slick-carousel-fixed-header'
             });
         });
         $(document).ready(function () {
-            $('.slick-carousel-header').slick({
+            $('.slick-carousel-fixed-header').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: false,
@@ -167,7 +167,7 @@
                 draggable: false,
                 cssEase: 'ease',
                 waitForAnimate: 'false',
-                asNavFor: '.slick-carousel'
+                asNavFor: '.slick-carousel-fixed'
             });
         });
     </script>
