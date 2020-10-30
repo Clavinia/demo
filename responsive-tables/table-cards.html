@@ -70,35 +70,6 @@
         </template>
 
 
-
-
-        <div class="">
-
-
-            <div class="table-grid simplified4 text-center">
-
-                <div class="title cell basics first-col">Name</div>
-                <div class="title cell basics">Protein</div>
-                <div class="title cell basics">Calories</div>
-                <div class="title cell basics">Fiber</div>
-
-
-
-                <template v-for="fruit in fruits">
-
-                    <!-- <div class="cell basics image"><img :src="'img/fruits/' + fruit.image + '.svg'"></div> -->
-                    <div class="cell basics first-col img"><img :src="'img/fruits/' + fruit.image + '.svg'">
-                        <span>{{fruit.name}}</span></div>
-                    <div class="cell basics">{{fruit.protein}}</div>
-                    <div class="cell basics">{{fruit.calories}}</div>
-                    <div class="cell basics">{{fruit.fiber}}</div>
-
-                </template>
-
-            </div>
-
-        </div>
-
     </div>
     
     <script src="vue-app.js" async defer type="module"></script>

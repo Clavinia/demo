@@ -14,9 +14,6 @@
 <body>
 
     <div id="vue-app">
-        <h2 class="h-title">Simplified table</h2>
-
-        <div class="canvas-mobile">
 
             <div class="table-grid simplified4 text-center">
 
@@ -29,7 +26,7 @@
 
                 <template v-for="fruit in fruits">
 
-                    <!-- <div class="cell basics image"><img :src="'img/fruits/' + fruit.image + '.svg'"></div> -->
+                    <!-- <div class="cell basics image"><img :src="'img/' + fruit.image + '.svg'"></div> -->
                     <div class="cell basics first-col img"><img :src="'img/fruits/' + fruit.image + '.svg'">
                         <span>{{fruit.name}}</span></div>
                     <div class="cell basics">{{fruit.protein}}</div>
@@ -42,7 +39,6 @@
 
         </div>
 
-    </div>
     
     <script src="vue-app.js" async defer type="module"></script>
     <link
