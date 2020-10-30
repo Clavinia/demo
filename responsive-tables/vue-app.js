@@ -26,6 +26,48 @@ var vm = new Vue({
         }
     },
     computed: { 
- 
-    }
+    },
+    mounted: function() {
+                if ( $( '#slick-carousel-slides' ).length ) {
+                    $('#slick-carousel-slides').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: false,
+                        arrows: false,
+                        dots: true
+                    });
+                }
+                if ( $( '#carousel-fixedcol' ).length ) {
+                    $('#carousel-fixedcol').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: false,
+                        arrows: false,
+                        dots: true
+                    });
+                }
+                if ( $( '#slick-carousel-fixed' ).length ) {
+                    $('#slick-carousel-fixed').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: false,
+                        arrows: false,
+                        dots: true,
+                        asNavFor: '.slick-carousel-fixed-header'
+                    });
+                }
+                if ( $( '#slick-carousel-fixed-header' ).length ) {
+                    $('#slick-carousel-fixed-header').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: false,
+                        arrows: false,
+                        dots: false,
+                        draggable: false,
+                        cssEase: 'ease',
+                        waitForAnimate: 'false',
+                        asNavFor: '.slick-carousel-fixed'
+                    });
+                }
+            }
     });
