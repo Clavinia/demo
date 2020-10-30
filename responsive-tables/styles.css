@@ -1,9 +1,13 @@
-
 body {
     font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    /* margin: 0; */
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     text-align: center;
     margin: 1em auto;
 }
@@ -63,7 +67,7 @@ table.basic thead {
 
 /* table grid */
 
-.table-grid  {
+.table-grid {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     font-size: .9rem;
@@ -92,7 +96,7 @@ table.basic thead {
 
 /* Table grid simplified*/
 
-.table-grid.simplified4  {
+.table-grid.simplified4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     font-size: .9rem;
@@ -106,7 +110,7 @@ table.basic thead {
     grid-column: span 3;
 }
 
-.table-grid.simplified  {
+.table-grid.simplified {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     font-size: .9rem;
@@ -150,12 +154,13 @@ table.basic thead {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
-} 
+}
+
 .no-fixed .slide-element-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
-} 
+}
 
 .no-fixed.carousel-container {
     width: 100%;
@@ -171,7 +176,7 @@ table.basic thead {
     grid-template-columns: 1fr;
     width: 20%;
     position: relative;
-    float:left;
+    float: left;
     background: white;
     box-sizing: border-box;
     z-index: 99;
@@ -241,7 +246,8 @@ table.basic thead {
     top: 0;
 
 }
-.tables-header-wrapper.fixed > div{
+
+.tables-header-wrapper.fixed>div {
     position: relative;
 }
 
@@ -318,9 +324,7 @@ table.basic thead {
 }
 
 
-.hidden {
-
-}
+.hidden {}
 
 
 
@@ -338,22 +342,11 @@ table.basic thead {
     font-weight: 600;
 }
 
-
-/* .fixed-header .title {
-    position: fixed;
-    width: 20%;
-}
-
-.fixed-header .firstColumn .title {
-    width: 26%;
-} */
-
-
 /* Responsive breakpoints */
 
 /* Small devices (landscape phones, 576px and up) */
 
-@media screen and (max-width: 576px) { 
+@media screen and (max-width: 576px) {
 
     .nav-margin .slick-dots {
         margin-left: -20%;
@@ -362,7 +355,7 @@ table.basic thead {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
 
     .canvas-mobile {
         max-width: 360px;
@@ -381,21 +374,16 @@ table.basic thead {
         grid-template-columns: repeat(3, 1fr);
         width: 288px;
     }
-    
+
     .canvas-mobile .carousel-container:not(.no-fixed) {
         width: 288px;
         margin-left: 70px;
     }
-    
 
- }
+}
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    
- }
+@media (min-width: 992px) {}
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    
- }
+@media (min-width: 1200px) {}
