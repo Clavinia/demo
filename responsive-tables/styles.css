@@ -1,7 +1,7 @@
 body {
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
-    /* margin: 0; */
+    margin: 0;
 }
 
 h1,
@@ -255,7 +255,7 @@ table.basic thead {
 /* Card version */
 
 .card-wrapper {
-    width: 99%;
+    width: 96%;
     margin: 1em auto;
     border: 1px solid #bbec6c;
     box-sizing: border-box;
@@ -324,9 +324,6 @@ table.basic thead {
 }
 
 
-.hidden {}
-
-
 
 /* Common styles */
 
@@ -341,6 +338,23 @@ table.basic thead {
     border-right: 1px solid white;
     font-weight: 600;
 }
+
+.box-wrapper {
+    transition: opacity ease .5s;
+    opacity: 1;
+    height: auto;
+}
+
+
+.hidden {
+    /* display: none;  
+    visibility: hidden;   */
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+
 
 /* Responsive breakpoints */
 

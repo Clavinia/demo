@@ -1,10 +1,14 @@
 import fruits from "./data/fruits.js";
 
+function hideButton(id) {
+    document.getElementById(id).classList.toggle('hidden');
+}
+
 var vm = new Vue({
     el: '#vue-app',
     data: {
         fruits: fruits,
-        visible: true
+        hidden: true
     },
     methods: {
         capitalizeFirstLetter: function (string) {
@@ -21,11 +25,16 @@ var vm = new Vue({
                     return string.toUpperCase();
                 })
         },
-        toggleVisibility: function() {
-            console.log('algún día seré');
+        toggleHide: function(id) {
+            hideButton(id);
         }
     },
     computed: { 
+        compClasses: function() {
+            return {
+                hidden: this.hidden,
+            }
+        }
     },
     mounted: function() {
                 if ( $( '#slick-carousel-slides' ).length ) {
