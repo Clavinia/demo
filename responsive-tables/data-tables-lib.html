@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/dt/dt-1.10.22/b-1.6.5/b-colvis-1.6.5/cr-1.5.2/fc-3.3.1/fh-3.1.7/r-2.2.6/sp-1.2.1/sl-1.3.1/datatables.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <div id="vue-app">
+
+        <div id="btn-filter" @click="popupVisible = !popupVisible">
+            <span>Filter</span>
+        </div>
+        <div class="popup" v-show="popupVisible">
+            <div class="shade"></div>
+            <div class="wrapper">
+            <h2>Edit table:</h2>
+            <span>Basics:</span>
+            <label><input class="toggle-vis" checked data-column="1" type="checkbox" id="cbox1" value="first_checkbox">Proteins</label>
+            <label><input class="toggle-vis" checked data-column="2" type="checkbox" id="cbox1" value="first_checkbox">Calories</label>
+            <label><input class="toggle-vis" checked data-column="3" type="checkbox" id="cbox1" value="first_checkbox">Fiber</label>
+            <span>Minerals:</span>
+            <label><input class="toggle-vis" data-column="4" type="checkbox" id="cbox1" value="first_checkbox">Potassium</label>
+            <label><input class="toggle-vis" data-column="5" type="checkbox" id="cbox1" value="first_checkbox">Calcium</label>
+            <label><input class="toggle-vis" data-column="6" type="checkbox" id="cbox1" value="first_checkbox">Phosphorous</label>
+            <label><input class="toggle-vis" data-column="7" type="checkbox" id="cbox1" value="first_checkbox">Magnesium</label>
+            <label><input class="toggle-vis" data-column="8" type="checkbox" id="cbox1" value="first_checkbox">Manganese</label>
+            <label><input class="toggle-vis" data-column="9" type="checkbox" id="cbox1" value="first_checkbox">Iron</label>
+            <label><input class="toggle-vis" data-column="10" type="checkbox" id="cbox1" value="first_checkbox">Sodium</label>
+            <label><input class="toggle-vis" data-column="11" type="checkbox" id="cbox1" value="first_checkbox">Copper</label>
+            <label><input class="toggle-vis" data-column="12" type="checkbox" id="cbox1" value="first_checkbox">Zinc</label>
+            <label><input class="toggle-vis" data-column="13" type="checkbox" id="cbox1" value="first_checkbox">Selenium</label>
+            <span>Vitamins</span>
+            <label><input class="toggle-vis" data-column="14" type="checkbox" id="cbox1" value="first_checkbox">Vitamin A</label>
+            <label><input class="toggle-vis" data-column="15" type="checkbox" id="cbox1" value="first_checkbox">Vitamin B1</label>
+            <label><input class="toggle-vis" data-column="16" type="checkbox" id="cbox1" value="first_checkbox">Vitamin B2</label>
+            <label><input class="toggle-vis" data-column="17" type="checkbox" id="cbox1" value="first_checkbox">Vitamin B6</label>
+            <label><input class="toggle-vis" data-column="18" type="checkbox" id="cbox1" value="first_checkbox">Vitamin C</label>
+            <label><input class="toggle-vis" data-column="19" type="checkbox" id="cbox1" value="first_checkbox">Vitamin E</label>
+            <label><input class="toggle-vis" data-column="20" type="checkbox" id="cbox1" value="first_checkbox">Vitamin K</label>
+            <label><input class="toggle-vis" data-column="21" type="checkbox" id="cbox1" value="first_checkbox">Niacin</label>
+            <label><input class="toggle-vis" data-column="22" type="checkbox" id="cbox1" value="first_checkbox">Folate</label>
+            <label><input class="toggle-vis" data-column="23" type="checkbox" id="cbox1" value="first_checkbox">Pantothenic Acid</label>
+            <div id="close" @click="popupVisible = !popupVisible">
+                Close
+            </div>
+        </div>
+
+        </div>
+
+        <div class="canvas">
+            <table class="dt display" id="data-tables-lib" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Protein</th>
+                        <th>Calories</th>
+                        <th>Fiber</th>
+                        <th>Potassium</th>
+                        <th>Calcium</th>
+                        <th>Phosphorous</th>
+                        <th>Magnesium</th>
+                        <th>Manganese</th>
+                        <th>Iron</th>
+                        <th>Sodium</th>
+                        <th>Copper</th>
+                        <th>Zinc</th>
+                        <th>Selenium</th>
+                        <th>Vitamin A</th>
+                        <th>Vitamin B1</th>
+                        <th>Vitamin B2</th>
+                        <th>Vitamin B6</th>
+                        <th>Vitamin C</th>
+                        <th>Vitamin E</th>
+                        <th>Vitamin K</th>
+                        <th>Niacin</th>
+                        <th>Folate</th>
+                        <th>Pantothenic Acid</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="fruit in fruits">
+                        <td><img :src="'img/fruits/' + fruit.image + '.svg'"> <br />
+                            {{fruit.name}}</td>
+                        <td>{{fruit.protein}}</td>
+                        <td>{{fruit.calories}}</td>
+                        <td>{{fruit.fiber}}</td>
+                        <td>{{fruit.minerals.potassium}}</td>
+                        <td>{{fruit.minerals.calcium}}</td>
+                        <td>{{fruit.minerals.phosphorous}}</td>
+                        <td>{{fruit.minerals.magnesium}}</td>
+                        <td>{{fruit.minerals.manganese}}</td>
+                        <td>{{fruit.minerals.iron}}</td>
+                        <td>{{fruit.minerals.sodium}}</td>
+                        <td>{{fruit.minerals.copper}}</td>
+                        <td>{{fruit.minerals.zinc}}</td>
+                        <td>{{fruit.minerals.selenium}}</td>
+                        <td>{{fruit.vitamins.vitaminA}}</td>
+                        <td>{{fruit.vitamins.vitaminB1}}</td>
+                        <td>{{fruit.vitamins.vitaminB2}}</td>
+                        <td>{{fruit.vitamins.vitaminB6}}</td>
+                        <td>{{fruit.vitamins.vitaminC}}</td>
+                        <td>{{fruit.vitamins.vitaminE}}</td>
+                        <td>{{fruit.vitamins.vitaminK}}</td>
+                        <td>{{fruit.vitamins.niacin}}</td>
+                        <td>{{fruit.vitamins.folate}}</td>
+                        <td>{{fruit.vitamins.pantothenicAcid}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="vue-app.js" async defer type="module"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/v/dt/dt-1.10.22/b-1.6.5/b-colvis-1.6.5/cr-1.5.2/fc-3.3.1/fh-3.1.7/r-2.2.6/sp-1.2.1/sl-1.3.1/datatables.min.js">
+    </script>
+
+
+</body>
+
+</html>
