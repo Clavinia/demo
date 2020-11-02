@@ -187,6 +187,37 @@ let fruits = {
             folate: '29 mcg'
         }
     },
+    orange: {
+        name: 'Orange',
+        image: 'orange',
+        protein: '1.23 g',
+        calories: '62 kcal',
+        fiber: '3.1 g',
+        minerals: {
+            potassium: '237 mg',
+            calcium: '52 mg',
+            phosphorous: '18 mg',
+            magnesium: '13 mg',
+            iron: '0.13 mg',
+            manganese: '0.033 mg',
+            zinc: '0.09 mg',
+            selenium: '0.7 mcg',
+            copper: '0.059 mg',
+            sodium: ''
+        },
+        vitamins: {
+            vitaminC: '69,7 mg',
+            vitaminA: '295 IU',
+            niacin: '0.369 mg',
+            pantothenicAcid: '0.328 mg',
+            vitaminE: '0.24 mg',
+            vitaminB6: '0.079 mg',
+            vitaminK: '',
+            vitaminB1: '0.114 mg',
+            vitaminB2: '0.052 mg',
+            folate: '39 mcg'
+        }
+    },
     pear: {
         name: 'Pear',
         image: 'pear',
@@ -247,6 +278,37 @@ let fruits = {
             vitaminB1: '0.13 mg',
             vitaminB2: '0.053 mg',
             folate: '30 mcg'
+        }
+    },
+    strawberry: {
+        name: 'Strawberry',
+        image: 'strawberry',
+        protein: '0.69 g',
+        calories: '46 kcal',
+        fiber: '2.9 g',
+        minerals: {
+            potassium: '220 mg',
+            phosphorous: '35 mg',
+            calcium: '23 mg',
+            magnesium: '19 mg',
+            sodium: '1 mg',
+            iron: '0.59 mg',
+            manganese: '0.556 mg',
+            zinc: '0.2 mg',
+            selenium: '0.6 mcg',
+            copper: '0.069 mcg'
+        },
+        vitamins: {
+            vitaminC: '84.7 mg',
+            vitaminA: '17 IU',
+            niacin: '0.556 mg',
+            vitaminB6: '0.068 mg',
+            vitaminE: '0.42 mg',
+            pantothenicAcid: '0.18 mg',
+            vitaminK: '3.2 mcg',
+            vitaminB1: '0.035 mg',
+            vitaminB2: '0.032 mg',
+            folate: '35 mcg'
         }
     }
 }

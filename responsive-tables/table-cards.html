@@ -42,28 +42,33 @@
 
                     </div>
                     <div class="minerals">
-                        <div class="btn border-bottom" id="btn-minerals" @click="toggleVisibility()">
+                        <div class="btn border-bottom" id="btn-minerals" @click="toggleHide('minerals-'+fruit.name.toLowerCase())">
                             <span>></span>
                             Minerals
                         </div>
-                        <template v-for="(val, key, index) in fruit.minerals">
-                            <div v-show="!visible" class="cell" v-if="val != ''">
-                                <span>{{ capitalizeFirstLetter(key) }}: </span>
-                                <span>{{val ? val : 'too little'}}</span>
-                            </div>
-                        </template>
+                        <div class="box-wrapper hidden" :id="'minerals-'+fruit.name.toLowerCase()" :ref="'minerals-'+fruit.name.toLowerCase()">
+                            <template v-for="(val, key, index) in fruit.minerals">
+                                <div class="cell" v-if="val != ''">
+                                    <span>{{ capitalizeFirstLetter(key) }}: </span>
+                                    <span>{{val ? val : 'too little'}}</span>
+                                </div>
+                            </template>
+                        </div>
+
                     </div>
                     <div class="vitamins">
-                        <div class="btn" id="btn-vitamins" @click="toggleVisibility()">
+                        <div class="btn border-bottom" id="btn-vitamins" @click="toggleHide('vitamins-'+fruit.name.toLowerCase())">
                             <span>></span>
                             Vitamins
                         </div>
+                        <div class="box-wrapper hidden" :id="'vitamins-'+fruit.name.toLowerCase()" :ref="'vitamins-'+fruit.name.toLowerCase()">
                         <template v-for="(val, key, index) in fruit.vitamins">
-                            <div v-show="!visible" class="cell">
+                            <div class="cell" class="cell">
                                 <span>{{ unCamelCase(key) }}: </span>
                                 <span>{{val}}</span>
                             </div>
                         </template>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,7 +76,7 @@
 
 
     </div>
-    
+
     <script src="vue-app.js" async defer type="module"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
