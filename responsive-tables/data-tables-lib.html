@@ -17,47 +17,68 @@
 
     <div id="vue-app">
 
-        <div id="btn-filter" @click="popupVisible = !popupVisible">
-            <span>Filter</span>
-        </div>
-        <div class="popup" v-show="popupVisible">
-            <div class="shade"></div>
-            <div class="wrapper">
-            <h2>Edit table:</h2>
-            <span>Basics:</span>
-            <label><input class="toggle-vis" checked data-column="1" type="checkbox" id="cbox1" value="first_checkbox">Proteins</label>
-            <label><input class="toggle-vis" checked data-column="2" type="checkbox" id="cbox1" value="first_checkbox">Calories</label>
-            <label><input class="toggle-vis" checked data-column="3" type="checkbox" id="cbox1" value="first_checkbox">Fiber</label>
-            <span>Minerals:</span>
-            <label><input class="toggle-vis" data-column="4" type="checkbox" id="cbox1" value="first_checkbox">Potassium</label>
-            <label><input class="toggle-vis" data-column="5" type="checkbox" id="cbox1" value="first_checkbox">Calcium</label>
-            <label><input class="toggle-vis" data-column="6" type="checkbox" id="cbox1" value="first_checkbox">Phosphorous</label>
-            <label><input class="toggle-vis" data-column="7" type="checkbox" id="cbox1" value="first_checkbox">Magnesium</label>
-            <label><input class="toggle-vis" data-column="8" type="checkbox" id="cbox1" value="first_checkbox">Manganese</label>
-            <label><input class="toggle-vis" data-column="9" type="checkbox" id="cbox1" value="first_checkbox">Iron</label>
-            <label><input class="toggle-vis" data-column="10" type="checkbox" id="cbox1" value="first_checkbox">Sodium</label>
-            <label><input class="toggle-vis" data-column="11" type="checkbox" id="cbox1" value="first_checkbox">Copper</label>
-            <label><input class="toggle-vis" data-column="12" type="checkbox" id="cbox1" value="first_checkbox">Zinc</label>
-            <label><input class="toggle-vis" data-column="13" type="checkbox" id="cbox1" value="first_checkbox">Selenium</label>
-            <span>Vitamins</span>
-            <label><input class="toggle-vis" data-column="14" type="checkbox" id="cbox1" value="first_checkbox">Vitamin A</label>
-            <label><input class="toggle-vis" data-column="15" type="checkbox" id="cbox1" value="first_checkbox">Vitamin B1</label>
-            <label><input class="toggle-vis" data-column="16" type="checkbox" id="cbox1" value="first_checkbox">Vitamin B2</label>
-            <label><input class="toggle-vis" data-column="17" type="checkbox" id="cbox1" value="first_checkbox">Vitamin B6</label>
-            <label><input class="toggle-vis" data-column="18" type="checkbox" id="cbox1" value="first_checkbox">Vitamin C</label>
-            <label><input class="toggle-vis" data-column="19" type="checkbox" id="cbox1" value="first_checkbox">Vitamin E</label>
-            <label><input class="toggle-vis" data-column="20" type="checkbox" id="cbox1" value="first_checkbox">Vitamin K</label>
-            <label><input class="toggle-vis" data-column="21" type="checkbox" id="cbox1" value="first_checkbox">Niacin</label>
-            <label><input class="toggle-vis" data-column="22" type="checkbox" id="cbox1" value="first_checkbox">Folate</label>
-            <label><input class="toggle-vis" data-column="23" type="checkbox" id="cbox1" value="first_checkbox">Pantothenic Acid</label>
-            <div id="close" @click="popupVisible = !popupVisible">
-                Close
+        <div class="">
+            <div id="btn-filter" @click="popupVisible = !popupVisible">
+                <span>Filter</span>
             </div>
-        </div>
-
-        </div>
-
-        <div class="canvas">
+            <div class="popup" v-show="popupVisible">
+                <div class="shade"></div>
+                <div class="wrapper">
+                    <h2>Edit table:</h2>
+                    <span>Basics:</span>
+                    <label><input class="toggle-vis" checked data-column="1" type="checkbox" id="cbox1"
+                            value="first_checkbox">Proteins</label>
+                    <label><input class="toggle-vis" checked data-column="2" type="checkbox" id="cbox1"
+                            value="first_checkbox">Calories</label>
+                    <label><input class="toggle-vis" checked data-column="3" type="checkbox" id="cbox1"
+                            value="first_checkbox">Fiber</label>
+                    <span>Minerals:</span>
+                    <label><input class="toggle-vis" data-column="4" type="checkbox" id="cbox1"
+                            value="first_checkbox">Potassium</label>
+                    <label><input class="toggle-vis" data-column="5" type="checkbox" id="cbox1"
+                            value="first_checkbox">Calcium</label>
+                    <label><input class="toggle-vis" data-column="6" type="checkbox" id="cbox1"
+                            value="first_checkbox">Phosphorous</label>
+                    <label><input class="toggle-vis" data-column="7" type="checkbox" id="cbox1"
+                            value="first_checkbox">Magnesium</label>
+                    <label><input class="toggle-vis" data-column="8" type="checkbox" id="cbox1"
+                            value="first_checkbox">Manganese</label>
+                    <label><input class="toggle-vis" data-column="9" type="checkbox" id="cbox1"
+                            value="first_checkbox">Iron</label>
+                    <label><input class="toggle-vis" data-column="10" type="checkbox" id="cbox1"
+                            value="first_checkbox">Sodium</label>
+                    <label><input class="toggle-vis" data-column="11" type="checkbox" id="cbox1"
+                            value="first_checkbox">Copper</label>
+                    <label><input class="toggle-vis" data-column="12" type="checkbox" id="cbox1"
+                            value="first_checkbox">Zinc</label>
+                    <label><input class="toggle-vis" data-column="13" type="checkbox" id="cbox1"
+                            value="first_checkbox">Selenium</label>
+                    <span>Vitamins</span>
+                    <label><input class="toggle-vis" data-column="14" type="checkbox" id="cbox1"
+                            value="first_checkbox">Vitamin A</label>
+                    <label><input class="toggle-vis" data-column="15" type="checkbox" id="cbox1"
+                            value="first_checkbox">Vitamin B1</label>
+                    <label><input class="toggle-vis" data-column="16" type="checkbox" id="cbox1"
+                            value="first_checkbox">Vitamin B2</label>
+                    <label><input class="toggle-vis" data-column="17" type="checkbox" id="cbox1"
+                            value="first_checkbox">Vitamin B6</label>
+                    <label><input class="toggle-vis" data-column="18" type="checkbox" id="cbox1"
+                            value="first_checkbox">Vitamin C</label>
+                    <label><input class="toggle-vis" data-column="19" type="checkbox" id="cbox1"
+                            value="first_checkbox">Vitamin E</label>
+                    <label><input class="toggle-vis" data-column="20" type="checkbox" id="cbox1"
+                            value="first_checkbox">Vitamin K</label>
+                    <label><input class="toggle-vis" data-column="21" type="checkbox" id="cbox1"
+                            value="first_checkbox">Niacin</label>
+                    <label><input class="toggle-vis" data-column="22" type="checkbox" id="cbox1"
+                            value="first_checkbox">Folate</label>
+                    <label><input class="toggle-vis" data-column="23" type="checkbox" id="cbox1"
+                            value="first_checkbox">Pantothenic Acid</label>
+                    <div id="close" @click="popupVisible = !popupVisible">
+                        Close
+                    </div>
+                </div>
+            </div>
             <table class="dt display" id="data-tables-lib" style="width:100%">
                 <thead>
                     <tr>
