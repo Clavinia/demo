@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'catcafe';
+  src:  url('/fonts/catcafe.eot?3lrf4x');
+  src:  url('/fonts/catcafe.eot?3lrf4x#iefix') format('embedded-opentype'),
+    url('/fonts/catcafe.ttf?3lrf4x') format('truetype'),
+    url('/fonts/catcafe.woff?3lrf4x') format('woff'),
+    url('/fonts/catcafe.svg?3lrf4x#catcafe') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'catcafe' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-drinking:before {
+  content: "\e900";
+}
+.icon-cat-toy-1:before {
+  content: "\e901";
+}
+.icon-aquarium:before {
+  content: "\e902";
+}
+.icon-bowl:before {
+  content: "\e903";
+}
+.icon-grooming:before {
+  content: "\e904";
+}
+.icon-first-aid-kit:before {
+  content: "\e905";
+}
+.icon-pet-insurance:before {
+  content: "\e906";
+}
+.icon-brush:before {
+  content: "\e907";
+}
+.icon-reception-bell:before {
+  content: "\e908";
+}
+.icon-cafeteria:before {
+  content: "\e909";
+}
+.icon-canteen:before {
+  content: "\e90a";
+}
+.icon-to-go-cup:before {
+  content: "\e90b";
+}
+.icon-cat:before {
+  content: "\e90c";
+}
+.icon-cat-food:before {
+  content: "\e90d";
+}
+.icon-fishbone:before {
+  content: "\e90e";
+}
+.icon-scratcher:before {
+  content: "\e90f";
+}
+.icon-soap:before {
+  content: "\e910";
+}
+.icon-collar:before {
+  content: "\e911";
+}
+.icon-milk:before {
+  content: "\e912";
+}
+.icon-print:before {
+  content: "\e913";
+}
+.icon-pet-shop:before {
+  content: "\e914";
+}
+.icon-cat-carrier:before {
+  content: "\e915";
+}
+.icon-cat-house:before {
+  content: "\e916";
+}
+.icon-cat-toy:before {
+  content: "\e917";
+}
+.icon-veterinary:before {
+  content: "\e918";
+}
+.icon-poop:before {
+  content: "\e919";
+}
+.icon-love:before {
+  content: "\e91a";
+}
+.icon-ball:before {
+  content: "\e91b";
+}
+.icon-home:before {
+  content: "\e91c";
+}
+.icon-image:before {
+  content: "\e91d";
+}
+.icon-headphones:before {
+  content: "\e91e";
+}
+.icon-music:before {
+  content: "\e91f";
+}
+.icon-profile:before {
+  content: "\e923";
+}
