@@ -1,15 +1,17 @@
 import fruits from "./data/fruits.js";
+import { createApp } from 'vue';
 
 function hideButton(id) {
     document.getElementById(id).classList.toggle('hidden');
 }
 
-var vm = new Vue({
-    el: '#vue-app',
-    data: {
-        fruits: fruits,
-        hidden: true,
-        popupVisible: false
+const app = createApp({
+    data() {
+        return {
+            fruits: fruits,
+            hidden: true,
+            popupVisible: false
+        }
     },
     methods: {
         capitalizeFirstLetter: function (string) {
@@ -108,3 +110,7 @@ var vm = new Vue({
         }
     }
 });
+
+// window.vueApp = app;
+
+app.mount('#vue-app');

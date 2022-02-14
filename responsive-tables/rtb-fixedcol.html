@@ -13,7 +13,13 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="styles.css">
     
-    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue@3"></script>    <script type="importmap">
+        {
+            "imports": {
+                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -58,8 +64,8 @@
                                 <div class="title cell minerals">Mineral #2</div>
                                 <div class="title cell minerals">Mineral #3</div>
                                 <template template v-for="fruit in fruits">
-                                    <template v-for="(val, key, index) in fruit.minerals" v-if="index < 3">
-                                        <div class="cell minerals">
+                                    <template v-for="(val, key, index) in fruit.minerals">
+                                        <div class="cell minerals" v-if="index < 3">
                                             <span>{{ capitalizeFirstLetter(key) }}</span>
                                             <span>{{val}}</span>
                                         </div>
@@ -73,8 +79,8 @@
                                 <div class="title cell vitamins">Vitamin #2</div>
                                 <div class="title cell vitamins">Vitamin #3</div>
                                 <template template v-for="fruit in fruits">
-                                    <template v-for="(val, key, index) in fruit.vitamins" v-if="index < 3">
-                                        <div class="cell vitamins">
+                                    <template v-for="(val, key, index) in fruit.vitamins">
+                                        <div class="cell vitamins" v-if="index < 3">
                                             <span>{{ unCamelCase(key) }}</span>
                                             <span>{{val}}</span>
                                         </div>
